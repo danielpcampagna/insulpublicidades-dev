@@ -1,0 +1,121 @@
+.services {
+    padding: var(--mobile-pad-b) var(--mobile-pad-i);
+    gap: 2rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.title,
+.subtitle {
+    font-family: var(--ff-display);
+    color: var(--very-dark-violet);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: calc(var(--fs) * 5);
+    font-weight: 400;
+}
+
+.description {
+    color: var(--dark-grayish-violet);
+    max-width: 80ch;
+}
+
+.image_cover {
+    display: none;
+}
+
+.bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bullet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bullet .icon_wrapper {
+    background-color: var(--primary-theme);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+}
+
+.bullet .icon {
+    width: 3rem;
+}
+
+.bullet .content {
+    gap: 1rem;
+}
+
+.bullet .title {
+    font-size: calc(var(--fs) * 2);
+}
+
+.bullet .description {
+    color: var(--dark-grayish-violet);
+    max-width: 50ch;
+}
+
+@media screen and (min-width: 1024px) {
+    .services {
+        padding: calc(var(--desktop-pad-b) * 5.5) var(--desktop-pad-i);
+        text-align: unset;
+
+        display: grid;
+        grid-template-columns: calc(50% - 4.5rem/2) calc(50% - 4.5rem/2);
+        gap: 4.5rem;
+    }
+
+    .title {
+        text-align: left;
+        font-size: calc(var(--fs) * 4);
+        line-height: calc(var(--fs) * 4.5);
+        padding-bottom: calc(var(--fs) * 0.5);
+    }
+
+    .content {
+        align-items: start;
+    }
+
+    .bullet .content {
+        gap: 0rem;
+    }
+
+    .description {
+        text-align: left;
+    }
+
+    .image_cover {
+        display: block;
+        border-radius: 40px;
+        margin: 2rem 0;
+
+        object-fit: cover;
+        width: max(min(25vw, 500px), 300px);
+        height: max(min(25vw, 300px), 200px);
+    }
+
+    .bullet {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    /* .bullet .title {
+        text-align: left;
+        font-size: calc(var(--fs) * 4);
+    } */
+}

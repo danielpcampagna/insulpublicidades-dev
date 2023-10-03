@@ -1,0 +1,125 @@
+.nav {
+    background: 
+    url("/images/bg-pattern-mobile-nav.svg") no-repeat bottom / contain,
+    var(--very-dark-violet);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all .5s ease-out;
+    z-index: 1;
+}
+
+.list {
+    padding: 1rem 0;
+    color: white;
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: calc(var(--fs) * 1.475);
+}
+
+.list li {
+    padding-block: .5rem;
+}
+
+.list li:not(:last-child) {
+    margin-block-end: .75rem;
+}
+
+.option {
+    text-decoration: none;
+    color: inherit;
+}
+
+.i_whatsapp {
+    display: none;
+    content: url('images/insul/whatsapp-icon-black.svg');
+}
+
+
+.contact_btn_bar {
+    border-radius: 1.5rem;
+    font-size: calc(var(--fs) * 1.475);
+    border: 1px solid white;
+    text-transform: uppercase;
+    font-weight: var(--fw-karla-bold);
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    padding-block: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .3rem;
+}
+
+.contact_btn_bar:hover {
+    background-color: white;
+    color: var(--primary-theme);
+    cursor: pointer;
+}
+
+.contact_btn_bar:hover .i_whatsapp {
+    content: url('images/insul/whatsapp-icon-white.svg');
+}
+
+@media screen and (min-width: 1024px) {
+    .nav {
+        position: unset;
+        background: unset;
+        height: unset;
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .list {
+        padding: 0;
+        font-size: var(--fs);
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .list li {
+        font-family: var(--ff-karla);
+        font-weight: var(--fw-karla-bold);
+        color: var(--dark-grayish-violet);
+    }
+
+    .list li,
+    .list li:not(:last-child) {
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact_btn_bar {
+        font-size: var(--fs);
+        color: var(--very-dark-violet);
+        border: 2px solid var(--very-dark-violet);
+        padding: calc(var(--mobile-pad-b) / 3.75) var(--mobile-pad-i);
+        margin: 0;
+        cursor: pointer;
+        width: unset;
+    }
+
+    .contact_btn_bar:hover {
+        background-color: var(--very-dark-violet);
+        color: white;
+    }
+
+    .list li:hover {
+        color: var(--very-dark-violet);
+    }
+
+    .contact_btn_bar, a {
+        transition: all .125s ease;
+    }
+
+    .i_whatsapp {
+        display: inline;
+    }
+}

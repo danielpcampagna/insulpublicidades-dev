@@ -1,0 +1,59 @@
+.results {
+    /* background-color: red; */
+    padding: var(--mobile-pad-b) var(--mobile-pad-i);
+    display: grid;
+    gap: 4.5rem;
+    text-align: center;
+    position: relative;
+    grid-template-columns: calc(50% - 4.5rem/2) calc(50% - 4.5rem/2);
+}
+
+.title,
+.subtitle {
+    font-family: var(--ff-display);
+    color: var(--very-dark-violet);
+}
+
+.title {
+    font-size: calc(var(--fs) * 5);
+    font-weight: 400;
+}
+
+.big_numbers_wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.result {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.description {
+    color: var(--dark-grayish-violet);
+    /* max-width: 50ch; */
+}
+
+@media screen and (min-width: 1024px) {
+    .results {
+        padding: calc(var(--desktop-pad-b) * 5.5) var(--desktop-pad-i);
+        text-align: unset;
+    }
+
+    .title {
+        font-size: calc(var(--fs) * 4);
+        line-height: calc(var(--fs) * 4.5);
+        padding-bottom: calc(var(--fs) * 0.5);
+    }
+
+    .description,
+    .title {
+        text-align: left;
+    }
+
+
+    .big_numbers .title {
+        text-align: left;
+        font-size: calc(var(--fs) * 4);
+    }
+}

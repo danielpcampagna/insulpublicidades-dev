@@ -1,0 +1,41 @@
+.where {
+    padding: var(--mobile-pad-b) var(--mobile-pad-i);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    /* gap: 1rem; */
+}
+
+.title,
+.subtitle {
+    font-family: var(--ff-display);
+    color: var(--very-dark-violet);
+    text-align: center;
+}
+
+.title {
+    font-size: calc(var(--fs) * 5);
+    font-weight: 400;    
+}
+
+.description {
+    color: var(--dark-grayish-violet);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.map {
+    border-radius: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .where {
+        padding: calc(var(--desktop-pad-b) * 5.5) var(--desktop-pad-i);
+        /* text-align: unset; */
+    }
+
+    .title {
+        font-size: calc(var(--fs) * 4);
+    }
+}
