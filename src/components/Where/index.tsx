@@ -1,4 +1,4 @@
-import { Icon, LatLngLiteral } from 'leaflet'
+import { LatLngLiteral } from 'leaflet'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 import styles from "./index.module.css"

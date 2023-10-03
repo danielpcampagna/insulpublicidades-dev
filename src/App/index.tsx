@@ -1,7 +1,5 @@
 import Intro from "../components/Intro"
 import Bar from "../components/Bar"
-import Features from '../components/Features'
-import Findout from "../components/Findout"
 import Footer from "../components/Footer"
 import Partnerships from "../components/Partnerships"
 import Results from "../components/Results"
@@ -22,8 +20,6 @@ function App() {
         <Services />
         <Where />
         <FAQ />
-        {/* <Features /> */}
-        {/* <Findout /> */}
       </main>
       <Footer />
     </>

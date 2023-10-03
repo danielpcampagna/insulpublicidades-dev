@@ -33,7 +33,7 @@ type CompProps = typeof data[0] & {
     onClick: (txt: string) => void;
 };
 
-const SummaryComponent = ({ title, isOpen }: CompProps) => (
+const SummaryComponent = ({ title }: CompProps) => (
     <div className={styles.question}>
         {title}
         <img src="images/insul/icons/plus.svg" alt="" />
