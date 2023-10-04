@@ -95,11 +95,11 @@ hr {
 }
 
 .contact_btn_bar:hover .i_whatsapp {
-    content: url('images/insul/whatsapp-icon-primary-theme.svg');
+    content: url('/images/insul/whatsapp-icon-primary-theme.svg');
 }
 
 .i_whatsapp {
-    content: url('images/insul/whatsapp-icon-white.svg');
+    content: url('/images/insul/whatsapp-icon-white.svg');
     padding-bottom: 5px;
 }
 

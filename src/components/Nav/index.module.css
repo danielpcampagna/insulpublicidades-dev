@@ -37,7 +37,7 @@
 
 .i_whatsapp {
     display: none;
-    content: url('images/insul/whatsapp-icon-black.svg');
+    content: url('/images/insul/whatsapp-icon-black.svg');
 }
 
 
@@ -64,7 +64,7 @@
 }
 
 .contact_btn_bar:hover .i_whatsapp {
-    content: url('images/insul/whatsapp-icon-white.svg');
+    content: url('/images/insul/whatsapp-icon-white.svg');
 }
 
 @media screen and (min-width: 1024px) {
