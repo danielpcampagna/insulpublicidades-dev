@@ -1,10 +1,11 @@
-import { LatLngLiteral } from 'leaflet'
+import React from 'react';
+import { LatLngLiteral, Icon } from 'leaflet'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css';
+import markerIcon from "/images/marker-icon.png"
 
 import styles from "./index.module.css"
 import "leaflet/dist/leaflet.css";
-import React from 'react';
+import 'leaflet/dist/leaflet.css';
 
 
 type Mark = LatLngLiteral & {
@@ -12,6 +13,8 @@ type Mark = LatLngLiteral & {
     description?: string | React.ReactNode
     icon?: string
 }
+
+const icon = new Icon({iconUrl: markerIcon, iconSize: [25, 41], iconAnchor: [12, 41]})
 
 const positions: Mark[] = [
     {
@@ -52,7 +55,7 @@ export function Where() {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 {positions.map(position => (
-                    <Marker key={position.key} position={position} >
+                    <Marker key={position.key} position={position} icon={icon} >
                         {position.description && (
                             <Popup> {position.description} </Popup>
                         )}
